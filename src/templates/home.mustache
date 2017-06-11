@@ -1,0 +1,62 @@
+<F3>{{> header.mustache}}
+<div class="wrapper row2">
+
+        <div id="container" class="clear">
+                <div id="combos" class="combos">
+                        <select name="cmbWorks" id="cmbWorks">
+                                {{#cmbWorks}}
+                                <option value="{{cval}}">{{cname}}</option>
+                                {{/cmbWorks}} 
+                        </select>
+                        <select name="cmbMainCats" id="cmbMainCats">
+                                {{#cmbMainCats}}
+                                <option value="{{cval}}">{{cname}}</option>
+                                {{/cmbMainCats}}
+                        </select>
+                        <select name="cmbCats" id="cmbCats">
+                                {{#cmbCats}}
+                                <option value="{{cval}}">{{cname}}</option>
+                                {{/cmbCats}}
+                        </select>
+                </div>
+                <div id="gallery" class="clear">
+                        <ul>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li class="last"><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li class="last"><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                                <li class="last"><a href="/"><img src="images/spacer.gif" alt=""/></a></li>
+                        </ul>
+                </div>
+                <div class="pagination">
+                        <ul>
+                                <li class="prev"><a href="/">« Previous</a></li>
+                                <li><a href="/">1</a></li>
+                                <li><a href="/">2</a></li>
+                                <li class="splitter"><strong>…</strong></li>
+                                <li><a href="/">6</a></li>
+                                <li class="current"><strong>7</strong></li>
+                                <li><a href="/">8</a></li>
+                                <li><a href="/">9</a></li>
+                                <li class="splitter"><strong>…</strong></li>
+                                <li><a href="/">14</a></li>
+                                <li><a href="/">15</a></li>
+                                <li class="next"><a href="/">Next »</a></li>
+                        </ul>
+                </div>
+        </div>
+</div>
+{{> footer.mustache}}

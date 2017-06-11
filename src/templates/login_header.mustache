@@ -1,0 +1,27 @@
+<div class="loginbox" id="loginbox">
+        {{^usr}}
+        <form id='frmHeaderLogin'>
+                Email: <input type='text' name='e' id='txtEmail'/> 
+                Password: <input type='password' name='p' id='txtPassword'/>
+                <input type='button' name='blogin' id='btnLogin' value='OK'/>
+        </form>
+        {{/usr}}
+        {{#usr}} 
+        Welcome {{usr}} | <a href='#' id='lkLogout'>Log Out</a>
+        {{/usr}}
+
+</div>
+<div id="header" class="clear">
+        <div class="fl_left">
+                <h3><a href="/">Gallery 17</a></h3>
+        </div>
+
+        <ul id="topnav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Compare</a></li>
+                {{#usr}}
+                <li><a href="#" id="lkMyImages">My Images</a></li>
+                <li class="active"><a href="/">My Profile</a></li>
+                {{/usr}}
+        </ul>
+</div>

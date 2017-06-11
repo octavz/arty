@@ -1,0 +1,17 @@
+{{>headernologin.mustache}}
+<div id="container" style="width:100%;height:800px">
+        <div align="center" style="height:300px;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;">
+                <form action="/login" method="post">
+                        <table>
+                                <tr>
+                                        <td> Email: </td><td><input type='text' name='e' id='txtEmail'/> </td></tr>
+                                <tr>
+                                        <td> Password: </td><td><input type='password' name='p' id='txtPassword'/></td></tr>
+                                <tr><td colspan="1" >
+                                                <input type='submit' name='blogin' id='btnLogin' value='OK'/>
+                                        </td><td><span class="error">{{error}}</span></td></tr>
+                        </table>
+                </form>
+        </div>
+</div>
+{{>footer.mustache}}

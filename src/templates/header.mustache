@@ -1,0 +1,57 @@
+<html>
+        <head>
+                <title>Arty.com</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+                        <meta http-equiv="imagetoolbar" content="no">
+
+                                <link href="/css/gallery.css" rel="stylesheet" type="text/css">
+                                        <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+                                                <link href="/css/fancyfields.css" rel="stylesheet" type="text/css">
+                                                                {{#css}}
+                                                                <link href="{{src}}" rel="stylesheet" type="text/css">
+                                                                {{/css}}
+
+                                                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                                                        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+                                                        <!--<script language="javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>-->
+                                                        <script language="javascript" src="http://knockoutjs.com/downloads/knockout-3.0.0.debug.js"></script>
+                                                        
+
+                                                                {{#script}}
+                                                                <script language="javascript" type="text/javascript" src="{{src}}"></script>
+                                                                {{/script}}
+                                                        </head>
+                                                        <body id="top">
+                                                                <div class="wrapper row1" id="headLogin">
+                                                                        <div class="loginbox" id="loginbox">
+                                                                                {{^usr}}
+                                                                                <form method="post" id="frmLogin" action="/">
+                                                                                        Email: <input type='text' name='e'/> 
+                                                                                        Password: <input type='password' name='p'/>
+                                                                                        <input type='submit' name='blogin' value='OK'/>
+                                                                                </form>
+                                                                                {{/usr}}
+                                                                                {{#usr}} 
+                                                                                Welcome {{usr}} | <a href='/logout'>Log Out</a><br/>
+
+                                                                                <a href="/upload">Upload Image</a>
+                                                                                {{/usr}}
+
+                                                                        </div>
+                                                                        <div id="header" class="clear">
+                                                                                <div class="fl_left">
+                                                                                </div>
+
+                                                                                <ul id="topnav">
+                                                                                        <li><a href="/">Home</a></li>
+                                                                                        {{#usr}}
+                                                                                        <li><a href="/upload" >Upload</a></li>
+                                                                                        <li><a href="/myItems" >My Images</a></li>
+                                                                                        <li class="active"><a href="/">My Profile</a></li>
+                                                                                        {{/usr}}
+                                                                                </ul>
+                                                                        </div>
+
+                                                                </div>
+
+                                                                <div class="wrapper row2">

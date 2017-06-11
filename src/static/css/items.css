@@ -1,0 +1,10 @@
+
+
+.item {
+        margin-bottom: 2px;
+        width:25%;
+}
+
+.item.w1 { width: 25%; }
+.item.w2 { width: 33%; }
+.item.w3 { width: 50%; }

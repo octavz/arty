@@ -1,0 +1,39 @@
+{{>header.mustache}}
+<div style="float:left">
+        <div id="upl" style="align:center;width:400px;height:400px" >		
+                <noscript>			
+                        <p>Please enable JavaScript to use file uploader.</p>
+                </noscript>         
+        </div>
+        <img src="#" id="preview" style="width:400;display:none;z-index:101"/>
+</div>
+<div style="margin-left:400px;padding-left:30px;display:none" id="frmItem">
+        <form method="post" action="/a/postitem" id="frm" data-bind="submit: saveItem">
+                <table>
+                        <tr><td>Title: </td> <td> <input type="text" name="title" id="title" style="width:400px" data-bind="value: title"/></td></tr>
+                        <tr><td>Description:</td><td><textarea name="desc" id="desc" style="width:400px" data-bind="value: description"></textarea></td></tr>
+                        <tr><td>Category:</td><td>
+                                        <select data-bind="options: optMain, optionsText:'val', value: filter">
+                                        </select></td></tr>
+                        <tr><td>Sub-category:</td><td>
+                                        <select name="cid" data-bind="options: fcats, optionsText: 'val', optionsValue: 'key', value: category">
+                                        </select>
+                                       </td></tr>
+                        <tr><td>Public item:</td><td>
+                                        <input type="checkbox" checked name="pub"/>
+                                        </select>
+                                       </td></tr>
+                        <tr><td colspan="2">
+                                        <input type="hidden" name="fkey" id="fkey"/>
+                                        <input type="submit" value="Save"/>
+                                </td></tr>
+                </table>
+        </form>
+</div>
+<script>        
+        var cmbData = {
+                optCats: [{{#cmbCats}}{key:{{cval}}, val:'{{cname}}', par:{{cdata}}},{{/cmbCats}}],
+                optMain: [{{#cmbMainCats}}{key:{{cval}}, val:'{{cname}}', par:{{cdata}}},{{/cmbMainCats}}],
+        }
+</script>    
+{{>footer.mustache}}

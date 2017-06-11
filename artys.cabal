@@ -1,0 +1,47 @@
+name:           Arty
+version:        0.1
+cabal-version:  >=1.2
+build-type:     Simple
+author:         octav
+
+executable artys
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:   
+                   base >= 4,
+                   bytestring,
+                   aeson,
+                   mongoDB,
+                   transformers,
+                   network,
+                   persistent-mongoDB,
+                   persistent,
+                   text,
+                   scotty,
+                   yesod,
+                   persistent-template,
+                   blaze-html,
+                   bytestring,
+                   resourcet,
+                   time,
+                   monad-logger,
+                   uuid,
+                   scotty-hastache,
+                   hastache,
+                   hastache-aeson,
+                   wai-middleware-static,
+                   template-haskell,
+                   filepath,
+                   cookie,
+                   directory,
+                   mtl,
+                   wai-extra,
+                   persistent-postgresql,
+                   old-locale,
+                   gd,
+                   thumbnail,
+                   containers,
+                   esqueleto,
+                   hedis
+  ghc-options:     -O2
+

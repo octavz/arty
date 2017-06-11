@@ -1,0 +1,30 @@
+{{> header.mustache}}
+<script>
+        $(function (){
+                var rand = function(min,max){ return Math.floor((Math.random()*max)+min) };
+                ko.utils.arrayForEach($(".item"), function (it){
+                        var r=rand(0,3)
+                        if(rand>0) it.className += " w" + rand(1,3);
+                });
+                //$(".item").addClass("w" + rand(1,3));
+                var $container = $('#mosaic');
+                $container.masonry({
+                                itemSelector: '.item',
+                                gutter:1
+                });
+                //var msnry = $container.data('masonry');
+                //msnry.layout();
+        });
+</script>
+<div id="container" class="wrapper row2">
+
+        <div id="mosaic">
+                {{#items}}
+                <div class="item">
+                        <img src="{{itUrl}}" width="100%"/>
+                </div>
+                {{/items}}
+        </div>
+</div>
+{{> footer.mustache}}
+
